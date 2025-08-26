@@ -45,3 +45,112 @@ Text Domain:  accelerate-theme-child
 	color: #45ac9d;
 	text-transform: uppercase;
 }
+
+/* Homepage Featured Work - horizontal on large screens, vertical on small screens */
+.homepage-featured-work {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* center the items horizontally */
+    flex-wrap: wrap; /* allow items to wrap to the next line on smaller screens */
+    gap: 2em; /* space between items */
+}
+
+.featured-work h4 {
+    font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 2.25em;
+}
+
+.individual-featured-work {
+    flex: 1 1 30%; /* grow/shrink with minimum width of ~30% */
+    max-width: 30%; /* ensures three items per row on large screens */
+    box-sizing: border-box;
+}
+
+/* Make items stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .individual-featured-work {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+/*Case Studies*/
+
+aside.case-study-sidebar {
+    float:left;
+    width: 300px
+}
+
+div.case-study-images { 
+    float: left;
+    width: 600px;
+}
+
+.case-study {
+    clear: both;
+}
+.case-study h2 {
+    font: 700 1.5em/1.5 'Open Sans Semibold';
+}
+.case-study h4 {
+    font: 400 .875em/1.25 'Open Sans';
+    margin: 1em 0;
+}
+.case-study h4 span {
+    color: #878787;
+}
+.case-study-sidebar p {
+    margin: 2em 0;
+}
+div.case-study-images {
+	margin-top: 3em;
+}
+div.case-study-images img {
+    width: 100%;
+	margin-bottom: 3.125em;
+	border: 1px solid #dddddd;
+}
+div.case-study-images img {
+	width: 100%;
+	height: auto;
+}
+.view-project-link {
+    color: #45ac9d;
+}
+/*END Case Studies*/
+
+/* Social Media Icons*/
+
+/* Remove bullets from the social menu */
+.social-media-navigation .social-media-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;         /* makes the list horizontal */
+    gap: 10px;             /* space between icons */
+    justify-content: center; /* optional: centers them */
+}
+
+/* Remove default list dot (redundant with list-style: none) */
+.social-media-navigation .social-media-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make sure icons are inline and clickable */
+.social-media-navigation .social-media-menu li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-media-navigation .social-media-menu li a span { 
+    display: none;
+}
