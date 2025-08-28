@@ -223,7 +223,6 @@ div.case-study-images img {
     100% { opacity: 0; transform: scale(0) translate(var(--x), var(--y)); }
   }
 
-
 .glitter-404, 
 .glitter-404 h1, 
 .glitter-404 p, 
