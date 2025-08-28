@@ -21,6 +21,8 @@ get_header(); ?>
 	<div class="main-content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
+        <h1 style="text-align: center;">Accelerate Your Marketing</h1>
+        <h3 style="text-align: center;">Save time. Increase sales. Make customers happier.</h3>
 				<a class="button" href="<?php echo site_url('/case-studies/') ?>">View Our Work</a>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
@@ -59,6 +61,7 @@ get_header(); ?>
      <?php while ( have_posts() ) : the_post(); ?>
       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
        <?php the_excerpt(); ?> 
+        <a class="view-project-link" href="<?php the_permalink(); ?>"><strong>Read More ></strong></a>
      <?php endwhile; ?> 
     <?php wp_reset_query(); ?>
    </div>
